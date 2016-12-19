@@ -46,7 +46,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wi6-QF-3Dy">
-                                <rect key="frame" x="160" y="361" width="54" height="30"/>
+                                <rect key="frame" x="160" y="336" width="54" height="30"/>
                                 <state key="normal" title="SIGN IN"/>
                                 <connections>
                                     <action selector="signinTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6XH-WY-hZE"/>
@@ -71,7 +71,7 @@
                             <constraint firstItem="FzO-9h-LHi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="4SJ-ce-nmo"/>
                             <constraint firstItem="Wi6-QF-3Dy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5ji-3B-eD7"/>
                             <constraint firstItem="Iv5-wf-da7" firstAttribute="top" secondItem="FzO-9h-LHi" secondAttribute="bottom" constant="26" id="6Tv-gd-Gyo"/>
-                            <constraint firstItem="Wi6-QF-3Dy" firstAttribute="top" secondItem="XUy-yi-VZK" secondAttribute="bottom" constant="50" id="Dqj-9o-fVi"/>
+                            <constraint firstItem="Wi6-QF-3Dy" firstAttribute="top" secondItem="XUy-yi-VZK" secondAttribute="bottom" constant="25" id="Dqj-9o-fVi"/>
                             <constraint firstItem="cuw-Lv-bhW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HDX-CT-0OE"/>
                             <constraint firstItem="osZ-SX-qt7" firstAttribute="top" secondItem="cuw-Lv-bhW" secondAttribute="bottom" constant="21" id="XnU-22-IkS"/>
                             <constraint firstItem="Iv5-wf-da7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bVS-4e-wyy"/>

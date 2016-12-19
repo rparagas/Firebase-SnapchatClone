@@ -12,6 +12,7 @@
 		A67DA5051E07CEE500191A27 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67DA5041E07CEE500191A27 /* SnapsViewController.swift */; };
 		A67DA5071E07D14900191A27 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67DA5061E07D14900191A27 /* PictureViewController.swift */; };
 		A67DA5091E07DFDC00191A27 /* SelectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67DA5081E07DFDC00191A27 /* SelectUserViewController.swift */; };
+		A67DA50D1E07E93200191A27 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67DA50C1E07E93200191A27 /* User.swift */; };
 		A689B4F61E07818B00EE1E75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A689B4F51E07818B00EE1E75 /* AppDelegate.swift */; };
 		A689B4F81E07818B00EE1E75 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A689B4F71E07818B00EE1E75 /* SignInViewController.swift */; };
 		A689B4FB1E07818B00EE1E75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A689B4F91E07818B00EE1E75 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		A67DA5041E07CEE500191A27 /* SnapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
 		A67DA5061E07D14900191A27 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
 		A67DA5081E07DFDC00191A27 /* SelectUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserViewController.swift; sourceTree = "<group>"; };
+		A67DA50C1E07E93200191A27 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A689B4F21E07818B00EE1E75 /* Firebase-SnapchatClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Firebase-SnapchatClone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A689B4F51E07818B00EE1E75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A689B4F71E07818B00EE1E75 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +59,25 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A67DA50A1E07E90100191A27 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A689B4F71E07818B00EE1E75 /* SignInViewController.swift */,
+				A67DA5041E07CEE500191A27 /* SnapsViewController.swift */,
+				A67DA5061E07D14900191A27 /* PictureViewController.swift */,
+				A67DA5081E07DFDC00191A27 /* SelectUserViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A67DA50B1E07E92300191A27 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A67DA50C1E07E93200191A27 /* User.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		A689B4E91E07818B00EE1E75 = {
 			isa = PBXGroup;
 			children = (
@@ -78,11 +99,9 @@
 		A689B4F41E07818B00EE1E75 /* Firebase-SnapchatClone */ = {
 			isa = PBXGroup;
 			children = (
+				A67DA50B1E07E92300191A27 /* Model */,
+				A67DA50A1E07E90100191A27 /* Controller */,
 				A689B4F51E07818B00EE1E75 /* AppDelegate.swift */,
-				A689B4F71E07818B00EE1E75 /* SignInViewController.swift */,
-				A67DA5041E07CEE500191A27 /* SnapsViewController.swift */,
-				A67DA5061E07D14900191A27 /* PictureViewController.swift */,
-				A67DA5081E07DFDC00191A27 /* SelectUserViewController.swift */,
 				A689B4F91E07818B00EE1E75 /* Main.storyboard */,
 				A689B4FC1E07818B00EE1E75 /* Assets.xcassets */,
 				A689B4FE1E07818B00EE1E75 /* LaunchScreen.storyboard */,
@@ -229,6 +248,7 @@
 				A67DA5071E07D14900191A27 /* PictureViewController.swift in Sources */,
 				A67DA5091E07DFDC00191A27 /* SelectUserViewController.swift in Sources */,
 				A689B4F61E07818B00EE1E75 /* AppDelegate.swift in Sources */,
+				A67DA50D1E07E93200191A27 /* User.swift in Sources */,
 				A67DA5051E07CEE500191A27 /* SnapsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
