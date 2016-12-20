@@ -39,6 +39,7 @@ class SelectUserViewController: UIViewController, UITableViewDelegate, UITableVi
         let snap = ["from": FIRAuth.auth()?.currentUser?.email, "caption": caption, "imageURL": imageURL]
         
         FIRDatabase.database().reference().child("users").child(user.uid).child("snaps").childByAutoId().setValue(snap)
+        navigationController!.popToRootViewController(animated: true)
     }
     
     

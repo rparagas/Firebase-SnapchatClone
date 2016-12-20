@@ -130,11 +130,53 @@
                     </navigationItem>
                     <connections>
                         <outlet property="snapsTableView" destination="aHK-mF-5Y4" id="vrn-rD-UDM"/>
+                        <segue destination="O99-Gv-qQO" kind="show" identifier="viewSnapSegue" id="Cwa-eV-wbe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Nc-Rk-oDZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1815.2" y="40.929535232383813"/>
+        </scene>
+        <!--View Snap View Controller-->
+        <scene sceneID="4XB-4L-9Gi">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="O99-Gv-qQO" customClass="ViewSnapViewController" customModule="Firebase_SnapchatClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W2Q-Y3-Edv"/>
+                        <viewControllerLayoutGuide type="bottom" id="mDq-h1-sqo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pYi-It-3F5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqg-jy-DKB">
+                                <rect key="frame" x="157.5" y="626" width="60" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lkJ-Nh-HGj">
+                                <rect key="frame" x="10" y="74" width="355" height="542"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lkJ-Nh-HGj" firstAttribute="top" secondItem="W2Q-Y3-Edv" secondAttribute="bottom" constant="10" id="6X6-68-qNK"/>
+                            <constraint firstItem="mDq-h1-sqo" firstAttribute="top" secondItem="gqg-jy-DKB" secondAttribute="bottom" constant="20" id="Aoz-Vj-Ycd"/>
+                            <constraint firstItem="gqg-jy-DKB" firstAttribute="top" secondItem="lkJ-Nh-HGj" secondAttribute="bottom" constant="10" id="QZI-JM-aft"/>
+                            <constraint firstItem="lkJ-Nh-HGj" firstAttribute="leading" secondItem="pYi-It-3F5" secondAttribute="leading" constant="10" id="USt-M8-TVn"/>
+                            <constraint firstAttribute="trailing" secondItem="lkJ-Nh-HGj" secondAttribute="trailing" constant="10" id="XKU-vI-rwN"/>
+                            <constraint firstItem="gqg-jy-DKB" firstAttribute="centerX" secondItem="pYi-It-3F5" secondAttribute="centerX" id="ZLr-ht-pAo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="captionLabel" destination="gqg-jy-DKB" id="jpe-ks-cYy"/>
+                        <outlet property="snapImageView" destination="lkJ-Nh-HGj" id="tdg-2g-7Fh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="weD-cB-g3A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1813.5999999999999" y="816.34182908545733"/>
         </scene>
         <!--Picture View Controller-->
         <scene sceneID="MfE-EC-UDF">
