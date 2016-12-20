@@ -17,6 +17,7 @@ class SelectUserViewController: UIViewController, UITableViewDelegate, UITableVi
     var users : [User] = [] //change array to whatever
     var imageURL : String = ""
     var caption : String = ""
+    var uuid : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,7 @@ class SelectUserViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let user = users[indexPath.row]
-        let snap = ["from": FIRAuth.auth()?.currentUser?.email, "caption": caption, "imageURL": imageURL]
+        let snap = ["from": FIRAuth.auth()?.currentUser?.email, "caption": caption, "imageURL": imageURL, "uuid": uuid]
         
         FIRDatabase.database().reference().child("users").child(user.uid).child("snaps").childByAutoId().setValue(snap)
         navigationController!.popToRootViewController(animated: true)
