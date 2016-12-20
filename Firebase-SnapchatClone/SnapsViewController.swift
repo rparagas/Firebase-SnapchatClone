@@ -7,14 +7,47 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
-class SnapsViewController: UIViewController {
+class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var snapsTableView: UITableView!
+    
+    var snaps : [Snap] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        snapsTableView.dataSource = self
+        snapsTableView.delegate = self
 
-        // Do any additional setup after loading the view.
+        FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("snaps").observe(FIRDataEventType.childAdded, with: {(snapshot) in
+            print(snapshot)
+            
+            let snap = Snap()
+            snap.caption = (snapshot.value as! NSDictionary)["caption"] as! String
+            snap.from = (snapshot.value as! NSDictionary)["from"] as! String
+            snap.imageURL = (snapshot.value as! NSDictionary)["imageURL"] as! String
+            
+            
+            self.snaps.append(snap)
+            self.snapsTableView.reloadData()
+        })
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return snaps.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        let snap = snaps[indexPath.row]
+        cell.textLabel?.text = snap.from
+        return cell
+    }
+        
     @IBAction func logoutTapped(_ sender: Any) {
         print("Successfully logged out")
         dismiss(animated: true, completion: nil)
